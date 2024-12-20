@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="examenIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pk-sY-XIv" userLabel="Login ">
+                                <rect key="frame" x="152" y="148" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2s0-97-1fj">
+                                <rect key="frame" x="61" y="215" width="241" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogu-zx-imh">
+                                <rect key="frame" x="61" y="292" width="241" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ks-GY-ad8">
+                                <rect key="frame" x="111" y="402" width="125" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar Sesion"/>
+                                <connections>
+                                    <action selector="iniciarSesion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EGg-Os-nTP"/>
+                                    <segue destination="frE-kO-luo" kind="show" identifier="goToHome" id="Kdc-Qg-Igq">
+                                        <segue key="commit" inheritsFrom="parent" id="RT3-kH-vEX"/>
+                                        <segue key="preview" inheritsFrom="commit" id="AhP-E6-rQG"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ogu-zx-imh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="0ln-Ha-e06"/>
+                            <constraint firstItem="ogu-zx-imh" firstAttribute="trailing" secondItem="2s0-97-1fj" secondAttribute="trailing" id="3Ho-vm-EuK"/>
+                            <constraint firstItem="ogu-zx-imh" firstAttribute="leading" secondItem="2s0-97-1fj" secondAttribute="leading" id="E0M-rq-PZ7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ks-GY-ad8" secondAttribute="bottom" constant="381" id="Gog-1a-gay"/>
+                            <constraint firstItem="8pk-sY-XIv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="SA1-2W-VhR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ogu-zx-imh" secondAttribute="trailing" constant="91" id="YaQ-l2-DNg"/>
+                            <constraint firstItem="8pk-sY-XIv" firstAttribute="centerX" secondItem="7Ks-GY-ad8" secondAttribute="centerX" id="aMJ-g0-2M2"/>
+                            <constraint firstItem="7Ks-GY-ad8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="eqO-5w-BEq"/>
+                            <constraint firstItem="2s0-97-1fj" firstAttribute="top" secondItem="8pk-sY-XIv" secondAttribute="bottom" constant="46" id="etD-V1-tIU"/>
+                            <constraint firstItem="7Ks-GY-ad8" firstAttribute="top" secondItem="ogu-zx-imh" secondAttribute="bottom" constant="76" id="hwd-QG-ApZ"/>
+                            <constraint firstItem="8pk-sY-XIv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="u0p-ca-4Pa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xB3-Vp-DB4"/>
+                    <connections>
+                        <outlet property="password" destination="ogu-zx-imh" id="xEH-5m-CY0"/>
+                        <outlet property="user" destination="2s0-97-1fj" id="R51-ci-liV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3533.5877862595416" y="-5.6338028169014089"/>
+        </scene>
+        <!--Dashboard Controller-->
+        <scene sceneID="ScH-LH-O14">
+            <objects>
+                <viewController id="frE-kO-luo" customClass="DashboardController" customModule="examenIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z07-zG-Ymd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2H1-4L-yvO">
+                                <rect key="frame" x="38" y="271" width="316" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCx-Fu-0Ie">
+                                <rect key="frame" x="124" y="141" width="144" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="actualizar Perro"/>
+                                <connections>
+                                    <action selector="updateDog:" destination="frE-kO-luo" eventType="touchUpInside" id="zdh-gf-qNK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BEl-QR-qjO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j4U-vJ-VlU"/>
+                    <connections>
+                        <outlet property="imgdog" destination="2H1-4L-yvO" id="7hd-Ja-orV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzF-sf-bxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4567.1755725190842" y="-156.33802816901408"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kdc-Qg-Igq"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
